@@ -1,0 +1,8 @@
+\<% _.each(sections, function(section) {
+\  %> <h1 class="further_reading_header"><%= section.header %></h1> <%
+\  %> <ul class= "further_reading"> <%
+\    %> <% _.each(section.links, function(link) {
+\      %> <li><a href="<%= link.url %>" target="_blank"><%= link.name %></a></li> <%
+\    }) %> <%
+\    %> </ul> <%
+\}) %>

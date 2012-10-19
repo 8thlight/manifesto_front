@@ -1,0 +1,8 @@
+%h2
+  <%= hang_on %>
+%p
+  <%= there_were_problems_with_your_signature %>
+%ul
+  \<% _.each(errors, function(error) {
+  \  %> <li> <%= error %> </li> <%
+  \}) %>
