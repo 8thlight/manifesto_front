@@ -1,0 +1,62 @@
+body {
+  font-size: 62.5%;
+  background-color: #000000;
+  &:lang(en) {
+    font-family: en;
+  }
+  &:lang(es) {
+    font-family: es;
+  }
+  &:lang(zh-tw) {
+    font-family: zh-tw;
+  }
+  &:lang(zh-hk) {
+    font-family: zh-hk;
+  }
+  &:lang(zh-cn) {
+    font-family: zh-cn;
+  }
+}
+
+@font-face {
+  font-family: en;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
+
+@font-face {
+  font-family: es;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
+
+@font-face {
+  font-family: zh-tw;
+  src: local("BiauKai"), local("微軟正黑體");
+}
+
+@font-face {
+  font-family: zh-tw;
+  unicode-range: U+00-024F;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
+
+@font-face {
+  font-family: zh-hk;
+  src: local("BiauKai"), local("微軟正黑體");
+}
+
+@font-face {
+  font-family: zh-hk;
+  unicode-range: U+00-024F;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
+
+@font-face {
+  font-family: zh-cn;
+  src: local("STKaiti"), local("微軟雅黑體");
+}
+
+@font-face {
+  font-family: zh-cn;
+  unicode-range: U+00-024F;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
