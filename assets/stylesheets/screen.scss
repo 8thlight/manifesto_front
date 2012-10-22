@@ -1,6 +1,7 @@
 /* CSS Document by Dieter Schneider 2006 www.csstemplateheaven.com */
 
 @import "languages";
+@import "sprites";
 
 * {
   margin: 0;
@@ -28,16 +29,7 @@ html {
   font-size: 1.2em;
 }
 
-#header {
-  background-image: url(../images/header_bg.jpg);
-  height: 186px;
-  width: 670px;
-  padding-top: 214px;
-  padding-left: 59px;
-}
-
 #content_top {
-  background-image: url(../images/content_top.jpg);
   height: 120px;
   width: 529px;
   text-align: center;
@@ -50,7 +42,6 @@ html {
   padding: 10px 10px 10px 10px;
   width: 180px;
   height: 20px;
-  background-image: url(../images/input.png);
 }
 
 input {
@@ -68,14 +59,13 @@ input {
 }
 
 #content {
-  background-image: url(../images/content_tile.jpg);
+  background-image: url(../images/content_tile.png);
   background-repeat: repeat-y;
   padding-left: 60px;
   padding-right: 60px;
 }
 
 #footer {
-  background-image: url(../images/footer.jpg);
   background-repeat: no-repeat;
   height: 211px;
   text-align: center;
@@ -210,14 +200,21 @@ a {
 
 /***************************  Navigation **********************/
 
+.button-text {
+  margin-top: -6px;
+  vertical-align: center;
+}
+
 .button {
-  height: 27px;
-  width: 100px;
+  width: 75px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../images/button.png);
   font-size: 16px;
   padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 12px;
+  margin-top: 10px;
+  text-align:center;
+  height:7px !important;
 }
 
 .button_link:link {
@@ -226,13 +223,8 @@ a {
 }
 
 .button:hover {
-  background-image: url(../images/button_hover.png);
-  color: black;
-}
-
-.button_text {
-  text-align: center;
-  padding-top: 4px;
+  background:url(../images/application.png) 0 -27px;
+  height:7px !important;
 }
 
 #navlist {
@@ -248,15 +240,11 @@ a {
   }
 }
 
-/************************************ Image Headings ******************************/
-
 .heading_title {
-  background-image: url(../images/title.png);
-  height: 50px;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-size: 24px;
+  width: 450px;
+  height: 55px;
   display: block;
+  margin: -3px auto -2px auto;
 }
 
 .invisible_headings {
