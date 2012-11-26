@@ -7,6 +7,9 @@ body {
   &:lang(es) {
     font-family: es;
   }
+  &:lang(tr) {
+    font-family: tr;
+  }
   &:lang(zh-tw) {
     font-family: zh-tw;
   }
@@ -25,6 +28,11 @@ body {
 
 @font-face {
   font-family: es;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
+
+@font-face {
+  font-family: tr;
   src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
 }
 
