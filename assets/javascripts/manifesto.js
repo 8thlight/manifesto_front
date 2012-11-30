@@ -3,8 +3,6 @@ var Manifesto = {
     $('#content').hide();
 
     Manifesto.fetchSignatories(1);
-    Manifesto.translate("en");
-    Manifesto.switchLocale();
   },
 
   translate: function(lang) {
@@ -22,14 +20,11 @@ var Manifesto = {
       $.fetchStaticJSON("jsons/manifesto/" + lang + ".json").done(function(response) {
         $('html').attr('lang', lang);
         $('title').html(response.title);
-        $('#heading_title').attr('href', 'api.html#' + lang);
         Manifesto.fetchContent(response);
+        $('a.heading_title').attr('href', '#/' + lang);
         $('#content_top, #manifesto, #signatory-table, #footer').show();
 
         Transitions.after(function() {
-          Manifesto.toggleSignForm();
-          Manifesto.toggleReading();
-          Manifesto.toggleHeading();
           Manifesto.bindSignButton(lang);
           Transitions.infiniteScroll(function() {
             Manifesto.fetchMoreSignatories();
@@ -110,41 +105,22 @@ var Manifesto = {
   },
 
   toggleSignForm: function() {
-    $('a#sign').bind('click', function() {
-      Transitions.before(function() {
-        $('#signatory-table, #manifesto, div#reading').hide();
-        $('div#sign').show();
-        Transitions.after();
-      });
-
-      Transitions.infiniteUnscroll();
+    Transitions.before(function() {
+      $('#signatory-table, #manifesto, div#reading').hide();
+      $('div#sign').show();
+      Transitions.after();
     });
+
+    Transitions.infiniteUnscroll();
   },
 
   toggleReading: function() {
-    $('a#reading').bind('click', function() {
-      Transitions.before(function() {
-        $('#signatory-table, #manifesto, div#sign').hide();
-        $('div#reading').show();
-        Transitions.after();
-      });
-
-      Transitions.infiniteUnscroll();
+    Transitions.before(function() {
+      $('#signatory-table, #manifesto, div#sign').hide();
+      $('div#reading').show();
+      Transitions.after();
     });
+
+    Transitions.infiniteUnscroll();
   },
-
-  toggleHeading: function() {
-    $('.heading_title').on('click', function() {
-      Transitions.before(function() {
-        $('div#sign, div#reading, div#message').hide();
-        $('#signatory-table, #manifesto').show();
-
-        Transitions.after(function() {
-          Transitions.infiniteScroll(function() {
-            Manifesto.fetchMoreSignatories();
-          });
-        });
-      });
-    });
-  }
 }
