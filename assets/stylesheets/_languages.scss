@@ -1,6 +1,10 @@
 body {
   font-size: 62.5%;
   background-color: #000000;
+  &:lang(de) {
+    font-size: 50.0%;
+    font-family: de;
+  }
   &:lang(en) {
     font-family: en;
   }
@@ -19,6 +23,11 @@ body {
   &:lang(zh-cn) {
     font-family: zh-cn;
   }
+}
+
+@font-face {
+  font-family: de;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
 }
 
 @font-face {

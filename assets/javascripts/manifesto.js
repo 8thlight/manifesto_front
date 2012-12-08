@@ -99,7 +99,7 @@ var Manifesto = {
   },
 
   switchLocale: function() {
-    $('a#en, a#zh-cn, a#tr, a#es').on('click', function() {
+    $('a#en, a#zh-cn, a#tr, a#es, a#de').on('click', function() {
       Manifesto.translate($(this).attr('id'));
     });
   },

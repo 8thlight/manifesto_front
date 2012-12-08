@@ -5,24 +5,23 @@
     %tr
       %td
         <%= name %>
-      %td
+      %td{:align => "right"}
         .input_container.input-image
           %input#signatory_name.large_round{:name => "signatory[name]", :size => "30", :type => "text"}
     %tr
       %td
         <%= email %>
-      %td
+      %td{:align => "right"}
         .input_container.input-image
           %input#signatory_email.large_round{:name => "signatory[email]", :size => "30", :type => "text"}
     %tr
       %td
         <%= location %>
-      %td
+      %td{:align => "right"}
         .input_container.input-image
           %input#signatory_location.large_round{:name => "signatory[location]", :size => "30", :type => "text"}
     %tr
       %td
-      %td{:align => "right"}
-        .button.button-image#sign-button
-          .button-text
-            <%= sign %>
+      %td.button-cell{:align => "right"}
+        %a.button#sign-button
+          <%= sign %>
