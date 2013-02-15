@@ -131,6 +131,8 @@ var Manifesto = {
         $('title').html(response.title);
         Manifesto.fetchContent(response);
         $('a.heading_title').attr('href', '#/' + lang);
+        $('a#sign').attr('href', '#/' + lang + '/sign');
+        $('a#reading').attr('href', '#/' + lang + '/reading');
         $('#content_top, #manifesto, #signatory-table, #footer').show();
 
         Transitions.after(function() {
@@ -208,7 +210,7 @@ var Manifesto = {
   },
 
   switchLocale: function() {
-    $('a#en, a#zh-cn, a#tr, a#es, a#de').on('click', function() {
+    $('a#en, a#zh-cn, a#tr, a#es, a#de, a#fr-fr').on('click', function() {
       Manifesto.translate($(this).attr('id'));
     });
   },

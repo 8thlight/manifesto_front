@@ -23,6 +23,14 @@ body {
   &:lang(zh-cn) {
     font-family: zh-cn;
   }
+  &:lang(fr-fr) {
+    font-family: fr-fr;
+  }
+}
+
+@font-face {
+  font-family: fr-fr;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
 }
 
 @font-face {

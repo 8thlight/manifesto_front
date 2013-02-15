@@ -9,14 +9,10 @@ $(document).ready(function() {
       root : '/',
 
       routes: [
-        { path: '/', callbacks: function () { Manifesto.translate("en"); }},
-        { path: '/de', callbacks: function () { Manifesto.translate("de"); }},
-        { path: '/en', callbacks: function () { Manifesto.translate("en"); }},
-        { path: '/es', callbacks: function () { Manifesto.translate("es"); }},
-        { path: '/zh-cn', callbacks: function () { Manifesto.translate("zh-cn"); }},
-        { path: '/tr', callbacks: function () { Manifesto.translate("tr"); }},
-        { path: '/reading', callbacks: function () { Manifesto.toggleReading(); }},
-        { path: '/sign', callbacks: function () { Manifesto.toggleSignForm(); }},
+        { path: '/', callbacks: function (request) { Manifesto.translate("en"); }},
+        { path: '/:locale', callbacks: function (request) { Manifesto.translate(request.params.locale); }},
+        { path: '/:locale/reading', callbacks: function (request) { Manifesto.toggleReading(); }},
+        { path: '/:locale/sign', callbacks: function (request) { Manifesto.toggleSignForm(); }},
         { path: '/:lang/confirmation/:id', callbacks: function (request) { Manifesto.confirmation(request.params); }}
       ]
     });
