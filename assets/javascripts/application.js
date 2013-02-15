@@ -16,7 +16,8 @@ $(document).ready(function() {
         { path: '/zh-cn', callbacks: function () { Manifesto.translate("zh-cn"); }},
         { path: '/tr', callbacks: function () { Manifesto.translate("tr"); }},
         { path: '/reading', callbacks: function () { Manifesto.toggleReading(); }},
-        { path: '/sign', callbacks: function () { Manifesto.toggleSignForm(); }}
+        { path: '/sign', callbacks: function () { Manifesto.toggleSignForm(); }},
+        { path: '/:lang/confirmation/:id', callbacks: function (request) { Manifesto.confirmation(request.params); }}
       ]
     });
 

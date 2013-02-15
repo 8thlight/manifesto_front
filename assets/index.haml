@@ -22,10 +22,16 @@
       = render "confirmation"
     %script#signature-errors{:type => "text/template"}
       = render "signature_errors"
+    %script#signature-confirm{:type => "text/template"}
+      = render "signature_confirm"
+    %script#signature-remove{:type => "text/template"}
+      = render "signature_remove"
     %script#footer-template{:type => "text/template"}
       = render "footer"
     %script#reading-template{:type => "text/template"}
       = render "reading"
+    %script#message{:type => "text/template"}
+      = render "message"
   %body
     .translations
       %a#tr{:href => "#/de", :style => "font-family: de;"} Deutsch
@@ -40,9 +46,9 @@
     #container
       #content_top.content_top-image
       #content
-        #message
         #sign
         #reading
         #manifesto
+        #message
         %table#signatory-table{"data-id" => "1"}
       #footer.footer-image
