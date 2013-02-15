@@ -26,6 +26,14 @@ body {
   &:lang(fr-fr) {
     font-family: fr-fr;
   }
+  &:lang(ru-ru) {
+    font-family: ru-ru;
+  }
+}
+
+@font-face {
+  font-family: ru-ru;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
 }
 
 @font-face {
