@@ -89,7 +89,7 @@ var Manifesto = {
 
               $('div#message').html(Partials.renderSignatureRemove(context));
 
-              $('a#remove').click(function(event) {
+              $('a#decline').click(function(event) {
                 event.preventDefault();
                 $.postJSON('sign/decline', {'id': id}).done(function(response) {
                   if (response.success) {
