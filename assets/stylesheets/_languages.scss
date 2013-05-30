@@ -29,6 +29,9 @@ body {
   &:lang(ru-ru) {
     font-family: ru-ru;
   }
+  &:lang(vi) {
+    font-family: vi;
+  }
 }
 
 @font-face {
@@ -91,5 +94,10 @@ body {
 @font-face {
   font-family: zh-cn;
   unicode-range: U+00-024F;
+  src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
+}
+
+@font-face {
+  font-family: vi;
   src: local("Georgia"), local("Times New Roman"), local("Times"), local("serif");
 }

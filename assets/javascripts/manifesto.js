@@ -210,7 +210,7 @@ var Manifesto = {
   },
 
   switchLocale: function() {
-    $('a#en, a#zh-cn, a#tr, a#es, a#de, a#fr-fr, a#ru-ru').on('click', function() {
+    $('a#en, a#zh-cn, a#tr, a#es, a#de, a#fr-fr, a#ru-ru, a#vi').on('click', function() {
       Manifesto.translate($(this).attr('id'));
     });
   },
